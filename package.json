@@ -25,7 +25,7 @@
     "koa": "^2.0.0-alpha.7",
     "eslint": "3.5.0",
     "eslint-config-airbnb-base": "7.1.0",
-    "eslint-plugin-import": "1.15.0"
+    "eslint-plugin-import": "1.16.0"
   },
   "peerDependencies": {
     "koa": "^2.0.0-alpha.7"

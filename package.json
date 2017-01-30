@@ -32,7 +32,7 @@
     "mocha": "^3.2.0",
     "mocha-eslint": "^3.0.1",
     "nodemon": "^1.11.0",
-    "supertest": "^2.0.1"
+    "supertest": "^3.0.0"
   },
   "peerDependencies": {
     "koa": "^2.0.0-alpha.7"

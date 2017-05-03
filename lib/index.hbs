@@ -69,6 +69,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/{{swaggerVersion}}/swagger-ui-bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/{{swaggerVersion}}/swagger-ui-standalone-preset.js"></script>
 <script>
+function HideTopbarPlugin() {
+  // this plugin overrides the Topbar component to return nothing
+  return {
+    components: {
+      Topbar: function() { return null }
+    }
+  }
+}
+
 window.onload = function() {
   const options = {{{json swaggerOptions}}};
   options.presets = [
@@ -77,7 +86,10 @@ window.onload = function() {
     Array.isArray(SwaggerUIStandalonePreset) ? SwaggerUIStandalonePreset : SwaggerUIStandalonePreset.default
   ];
   options.plugins = [
-    SwaggerUIBundle.plugins.DownloadUrl
+    SwaggerUIBundle.plugins.DownloadUrl,
+    {{#if hideTopbar}}
+      HideTopbarPlugin
+    {{/if}}
   ];
   // Build a system
   const ui = SwaggerUIBundle(options)

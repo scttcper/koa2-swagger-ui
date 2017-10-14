@@ -27,7 +27,7 @@
     "nodemon": "^1.12.1",
     "nyc": "^11.2.1",
     "supertest": "^3.0.0",
-    "swagger-ui": "3.3.1"
+    "swagger-ui": "3.3.2"
   },
   "nyc": {
     "reporter": [

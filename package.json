@@ -23,7 +23,7 @@
     "eslint-plugin-import": "^2.8.0",
     "koa": "^2.4.1",
     "koa-router": "^7.3.0",
-    "mocha": "^4.1.0",
+    "mocha": "^5.0.0",
     "nyc": "^11.4.1",
     "supertest": "^3.0.0",
     "swagger-ui-dist": "3.9.0"

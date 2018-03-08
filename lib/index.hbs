@@ -80,16 +80,30 @@ function HideTopbarPlugin() {
 
 window.onload = function() {
   const options = {{{json swaggerOptions}}};
+  {{#isset swaggerOptions.requestInterceptor}}
+  options.requestInterceptor = {{{strfnc swaggerOptions.requestInterceptor}}};
+  {{/isset}}
+  {{#isset swaggerOptions.responseInterceptor}}
+  options.responseInterceptor = {{{strfnc swaggerOptions.responseInterceptor}}};
+  {{/isset}}
+  {{#isset swaggerOptions.responseInterceptor}}
+  options.modelPropertyMacro = {{{strfnc swaggerOptions.modelPropertyMacro}}};
+  {{/isset}}
+  {{#isset swaggerOptions.parameterMacro}}
+  options.parameterMacro = {{{strfnc swaggerOptions.parameterMacro}}};
+  {{/isset}}
   options.presets = [
     SwaggerUIBundle.presets.apis,
     // yay ES6 modules ↘
-    Array.isArray(SwaggerUIStandalonePreset) ? SwaggerUIStandalonePreset : SwaggerUIStandalonePreset.default
+    Array.isArray(SwaggerUIStandalonePreset) ? SwaggerUIStandalonePreset : SwaggerUIStandalonePreset.default,
+    {{{swaggerOptions.presets}}}
   ];
   options.plugins = [
     SwaggerUIBundle.plugins.DownloadUrl,
     {{#if hideTopbar}}
       HideTopbarPlugin
-    {{/if}}
+    {{/if}},
+    {{{swaggerOptions.plugins}}}
   ];
   // Build a system
   const ui = SwaggerUIBundle(options)

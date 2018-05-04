@@ -24,4 +24,16 @@ describe('koa2-swagger-ui', function() {
       .expect('Content-Type', 'text/css')
       .expect(200);
   });
+  it('should return icon16x16', function() {
+    return request(app.callback())
+      .get('/favicon-16x16.png')
+      .expect('Content-Type', /png/)
+      .expect(200);
+  });
+  it('should return icon32x32', function() {
+    return request(app.callback())
+      .get('/favicon-32x32.png')
+      .expect('Content-Type', /png/)
+      .expect(200);
+  });
 });

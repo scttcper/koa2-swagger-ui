@@ -41,10 +41,11 @@ swaggerOptions: { // passed to SwaggerUi()
   defaultModelRendering: 'schema',
   showRequestHeaders: false,
   swaggerVersion: 'x.x.x' // read from package.json,
-
 },
 routePrefix: '/docs', // route where the view is returned
 hideTopbar: false, // hide swagger top bar
+favicon16: '/favicon-16x16.png', // default icon 16x16, set for self icon
+favicon32: '/favicon-32x32.png', // default icon 32x32, set for self icon
 ```
 
 ## example

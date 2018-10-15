@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "tslint-xo/space",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "semicolon": [true, "always"],
+    "comment-format": false
+  }
+}

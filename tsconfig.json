@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "target": "es2015",
+    "module": "commonjs",
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "lib/index.ts"
+  ]
+}

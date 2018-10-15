@@ -2,8 +2,8 @@
   "name": "koa2-swagger-ui",
   "version": "0.0.0-placeholder",
   "description": "Swagger UI middleware for koa",
-  "main": "./index.js",
-  "typings": "./index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "start": "ts-node test/example.ts",
     "lint": "tslint -t stylish -p .",

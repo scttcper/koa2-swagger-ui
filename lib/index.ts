@@ -15,7 +15,8 @@ export interface SwaggerOptions {
   defaultModelRendering: string;
   showRequestHeaders: boolean;
   layout: string;
-  [key: string]: string | boolean | string[];
+  spec: object;
+  [key: string]: string | boolean | string[] | object;
 }
 
 export interface KoaSwaggerUiOptions {

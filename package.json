@@ -41,7 +41,7 @@
     "eslint-config-prettier": "6.0.0",
     "eslint-config-xo-space": "0.21.0",
     "eslint-config-xo-typescript": "0.15.0",
-    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-import": "2.18.2",
     "jest": "24.8.0",
     "koa": "2.7.0",
     "koa-router": "7.4.0",

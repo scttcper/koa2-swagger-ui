@@ -29,7 +29,7 @@
     "koa": "^2.7.0"
   },
   "devDependencies": {
-    "@types/jest": "24.0.15",
+    "@types/jest": "24.0.16",
     "@types/koa-router": "7.0.42",
     "@types/lodash": "4.14.136",
     "@types/node": "12.6.2",

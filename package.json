@@ -42,7 +42,7 @@
     "eslint-config-xo-typescript": "0.17.0",
     "eslint-plugin-import": "2.18.2",
     "jest": "24.9.0",
-    "koa": "2.8.1",
+    "koa": "2.8.2",
     "koa-router": "7.4.0",
     "semantic-release": "15.13.24",
     "supertest": "4.0.2",

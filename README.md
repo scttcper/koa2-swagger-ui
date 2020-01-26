@@ -63,3 +63,29 @@ app.use(
 
 app.listen(3000);
 ```
+
+## example with koa-router and yaml source
+depends on yamljs to turn your Yaml into a JS object
+```
+npm install --save yamljs
+```
+```javascript
+const Koa = require('koa');
+const Router = require('koa-router');
+const yamljs = require('yamljs');
+const koaSwagger = require('koa2-swagger-ui');
+
+const router = new Router({ prefix: '/' });
+
+const app = new Koa();
+const router = new Router();
+
+// .load loads file from root.
+const spec = yaml2js.load('./openapi.yaml');
+
+router.use(koaSwagger());
+router.get('/docs', koaSwagger({ routePrefix: false, swaggerOptions: { spec } }));
+
+app.use(router.routes());
+app.listen(3000);
+```

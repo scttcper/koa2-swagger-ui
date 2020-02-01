@@ -46,7 +46,7 @@
     "koa-router": "7.4.0",
     "semantic-release": "16.0.4",
     "supertest": "4.0.2",
-    "swagger-ui-dist": "3.24.2",
+    "swagger-ui-dist": "3.25.0",
     "ts-jest": "24.3.0",
     "ts-node": "8.6.2",
     "typescript": "3.7.5"

@@ -38,7 +38,7 @@
     "@typescript-eslint/parser": "2.19.0",
     "del-cli": "3.0.0",
     "eslint": "6.8.0",
-    "eslint-config-xo-space": "0.22.0",
+    "eslint-config-xo-space": "0.24.0",
     "eslint-config-xo-typescript": "0.26.0",
     "eslint-plugin-import": "2.20.1",
     "jest": "25.1.0",

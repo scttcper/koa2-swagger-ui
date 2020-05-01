@@ -44,7 +44,7 @@
     "jest": "25.2.4",
     "koa": "2.11.0",
     "koa-router": "8.0.8",
-    "semantic-release": "17.0.4",
+    "semantic-release": "17.0.7",
     "supertest": "4.0.2",
     "swagger-ui-dist": "3.25.0",
     "ts-jest": "25.3.0",

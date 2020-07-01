@@ -39,7 +39,7 @@
     "del-cli": "3.0.1",
     "eslint": "7.1.0",
     "eslint-config-xo-space": "0.24.0",
-    "eslint-config-xo-typescript": "0.29.0",
+    "eslint-config-xo-typescript": "0.31.0",
     "eslint-plugin-import": "2.20.2",
     "jest": "26.0.1",
     "koa": "2.11.0",

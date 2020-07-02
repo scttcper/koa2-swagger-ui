@@ -24,6 +24,12 @@ describe('koa2-swagger-ui', () => {
       .expect('Content-Type', 'text/css; charset=utf-8')
       .expect(200);
   });
+  it('should return spec', async () => {
+    await request(app.callback())
+      .get('/docs/spec')
+      .expect('Content-Type', /json/)
+      .expect(200);
+  });
   it('should return icon16x16', async () => {
     await request(app.callback())
       .get('/favicon-16x16.png')

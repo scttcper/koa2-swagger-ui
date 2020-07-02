@@ -24,6 +24,8 @@ export interface KoaSwaggerUiOptions {
   swaggerOptions: Partial<SwaggerOptions>;
   swaggerVersion: string;
   routePrefix: string | false;
+  specPrefix: string,
+  exposeSpec: boolean,
   hideTopbar: boolean;
   favicon16: string;
   favicon32: string;
@@ -38,7 +40,9 @@ const defaultOptions: KoaSwaggerUiOptions = {
     layout: 'StandaloneLayout',
   },
   routePrefix: '/docs',
+  specPrefix: '/docs/spec',
   swaggerVersion: '',
+  exposeSpec: false,
   hideTopbar: false,
   favicon16: '/favicon-16x16.png',
   favicon32: '/favicon-32x32.png',
@@ -71,6 +75,11 @@ function koaSwagger(config: Partial<KoaSwaggerUiOptions> = {}): Middleware {
 
   // eslint-disable-next-line func-names
   return function koaSwaggerUi(ctx: Context, next: Next) {
+    if (options.exposeSpec && ctx.path === options.specPrefix) {
+      ctx.body = options.swaggerOptions.spec;
+      return true;
+    }
+
     if (options.routePrefix === false || ctx.path === options.routePrefix) {
       ctx.type = 'text/html';
       ctx.body = index(options);

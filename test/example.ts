@@ -6,7 +6,11 @@ import koaSwagger from '../lib';
 const app = new Koa();
 const router = new KoaRouter();
 
-app.use(koaSwagger());
+app.use(koaSwagger({
+  exposeSpec: true,
+  swaggerOptions: { spec: {} },
+}));
+
 export default app;
 
 router.get('/moredocs', koaSwagger({ routePrefix: false }));

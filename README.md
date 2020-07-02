@@ -39,6 +39,8 @@ swaggerOptions: { // passed to SwaggerUi()
   swaggerVersion: 'x.x.x' // read from package.json,
 },
 routePrefix: '/docs', // route where the view is returned
+specPrefix: '/docs/spec', // route where the spec is returned
+exposeSpec: false, // expose spec file
 hideTopbar: false, // hide swagger top bar
 favicon16: '/favicon-16x16.png', // default icon 16x16, set for self icon
 favicon32: '/favicon-32x32.png', // default icon 32x32, set for self icon

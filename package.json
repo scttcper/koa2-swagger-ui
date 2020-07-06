@@ -36,7 +36,7 @@
     "@types/supertest": "2.0.10",
     "del-cli": "3.0.1",
     "jest": "26.1.0",
-    "koa": "2.11.0",
+    "koa": "2.13.0",
     "koa-router": "9.1.0",
     "supertest": "4.0.2",
     "swagger-ui-dist": "3.28.0",

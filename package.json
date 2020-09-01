@@ -37,7 +37,7 @@
     "del-cli": "3.0.1",
     "jest": "26.1.0",
     "koa": "2.13.0",
-    "koa-router": "9.1.0",
+    "koa-router": "9.4.0",
     "supertest": "4.0.2",
     "swagger-ui-dist": "3.31.1",
     "ts-jest": "26.1.2",

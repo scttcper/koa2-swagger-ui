@@ -28,7 +28,7 @@
     "koa": ">=2.13.0"
   },
   "devDependencies": {
-    "@ctrl/eslint-config": "1.0.4",
+    "@ctrl/eslint-config": "1.1.0",
     "@jest/globals": "26.1.0",
     "@types/koa-router": "7.4.1",
     "@types/lodash": "4.14.158",

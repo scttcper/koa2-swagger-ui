@@ -37,7 +37,7 @@
     "jest": "26.4.2",
     "koa": "2.13.0",
     "koa-router": "9.4.0",
-    "supertest": "4.0.2",
+    "supertest": "5.0.0",
     "swagger-ui-dist": "3.34.0",
     "ts-node": "9.0.0",
     "typescript": "4.0.3"

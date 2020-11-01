@@ -30,7 +30,7 @@
     "@ctrl/eslint-config": "1.2.5",
     "@jest/globals": "26.6.0",
     "@types/koa-router": "7.4.1",
-    "@types/lodash": "4.14.162",
+    "@types/lodash": "4.14.164",
     "@types/node": "14.14.0",
     "@types/supertest": "2.0.10",
     "del-cli": "3.0.1",

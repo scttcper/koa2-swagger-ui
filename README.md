@@ -86,7 +86,7 @@ const app = new Koa();
 const router = new Router();
 
 // .load loads file from root.
-const spec = yaml2js.load('./openapi.yaml');
+const spec = yamljs.load('./openapi.yaml');
 
 // example 1 using router.use()
 router.use(koaSwagger({ swaggerOptions: { spec } }));

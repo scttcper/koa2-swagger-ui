@@ -11,6 +11,18 @@ describe('koa2-swagger-ui', () => {
       .expect('Content-Type', /html/)
       .expect(200);
   });
+  it('should return index file with // on end', async () => {
+    await request(app.callback())
+      .get('/docs//')
+      .expect('Content-Type', /html/)
+      .expect(200);
+  });
+  it('should not return index file with ///2 on end', async () => {
+    await request(app.callback())
+      .get('/docs///2')
+      .expect('Content-Type', /plain/)
+      .expect(404);
+  });
   it('should return index file from koa router', async () => {
     await request(app.callback())
       .get('/moredocs')
@@ -34,6 +46,18 @@ describe('koa2-swagger-ui', () => {
       .get('/docs/spec')
       .expect('Content-Type', /json/)
       .expect(200);
+  });
+  it('should return spec with / on end', async () => {
+    await request(app.callback())
+      .get('/docs/spec/')
+      .expect('Content-Type', /json/)
+      .expect(200);
+  });
+  it('should not return spec with /l on end', async () => {
+    await request(app.callback())
+      .get('/docs/spec/l')
+      .expect('Content-Type', /plain/)
+      .expect(404);
   });
   it('should return favicon', async () => {
     await request(app.callback())

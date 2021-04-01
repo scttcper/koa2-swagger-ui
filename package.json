@@ -22,7 +22,7 @@
     "@types/koa": "^2.11.7",
     "handlebars": "^4.7.6",
     "lodash": "^4.17.20",
-    "read-pkg-up": "^7.0.1"
+    "read-pkg-up": "^8.0.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "7.12.13",

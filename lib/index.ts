@@ -75,8 +75,9 @@ export function koaSwagger(
   // Setup default options
   const options: KoaSwaggerUiOptions = defaultsDeep(config, defaultOptions);
 
-  const specPrefixRegex = new RegExp(`${options.specPrefix}[\/]*$`, 'i');
-  const routePrefixRegex = new RegExp(`${options.routePrefix}[\/]*$`, 'i');
+  const specPrefixRegex = new RegExp(`${options.specPrefix}[/]*$`, 'i');
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  const routePrefixRegex = new RegExp(`${options.routePrefix}[/]*$`, 'i');
 
   Handlebars.registerHelper('json', (context) => JSON.stringify(context));
   Handlebars.registerHelper('strfnc', (fnc: HelperDelegate) => fnc);

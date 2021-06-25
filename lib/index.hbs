@@ -80,6 +80,9 @@ function HideTopbarPlugin() {
 
 window.onload = function() {
   const options = {{{json swaggerOptions}}};
+  {{#isset swaggerOptions.onComplete}}
+  options.onComplete = {{{strfnc swaggerOptions.onComplete}}};
+  {{/isset}}
   {{#isset swaggerOptions.requestInterceptor}}
   options.requestInterceptor = {{{strfnc swaggerOptions.requestInterceptor}}};
   {{/isset}}

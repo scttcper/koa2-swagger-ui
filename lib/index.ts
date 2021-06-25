@@ -1,10 +1,11 @@
-import { readFileSync, createReadStream } from 'fs';
-import * as Handlebars from 'handlebars';
-import type { HelperDelegate, HelperOptions } from 'handlebars';
-import { defaultsDeep } from 'lodash';
+import { createReadStream, readFileSync } from 'fs';
 import { join } from 'path';
-import { sync as readPkgUpSync } from 'read-pkg-up';
+
+import type { HelperDelegate, HelperOptions } from 'handlebars';
+import * as Handlebars from 'handlebars';
 import type { Context, Middleware, Next } from 'koa';
+import { defaultsDeep } from 'lodash';
+import { sync as readPkgUpSync } from 'read-pkg-up';
 
 export interface SwaggerOptions {
   [key: string]:
@@ -63,9 +64,8 @@ export function koaSwagger(
       throw new Error('Package not found');
     }
 
-    defaultOptions.swaggerVersion = pkg.packageJson.devDependencies![
-      'swagger-ui-dist'
-    ];
+    defaultOptions.swaggerVersion =
+      pkg.packageJson.devDependencies!['swagger-ui-dist'];
   }
 
   // Setup icons

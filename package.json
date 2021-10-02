@@ -27,7 +27,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "7.15.4",
     "@babel/preset-typescript": "7.15.0",
-    "@ctrl/eslint-config": "2.1.0",
+    "@ctrl/eslint-config": "2.1.1",
     "@jest/globals": "27.2.4",
     "@types/koa-router": "7.4.4",
     "@types/lodash": "4.14.175",

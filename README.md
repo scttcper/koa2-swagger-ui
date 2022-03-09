@@ -44,6 +44,7 @@ specPrefix: '/docs/spec', // route where the spec is returned
 exposeSpec: false, // expose spec file
 hideTopbar: false, // hide swagger top bar
 favicon: '/favicon.png', // default favicon
+customCSS: `h1 { color: red }`, // Add Custom CSS on the html
 ```
 
 ## example

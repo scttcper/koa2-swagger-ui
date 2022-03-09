@@ -37,6 +37,7 @@ export interface KoaSwaggerUiOptions {
   exposeSpec: boolean;
   hideTopbar: boolean;
   favicon: string;
+  customCSS: string;
 }
 
 const defaultOptions: KoaSwaggerUiOptions = {
@@ -53,6 +54,7 @@ const defaultOptions: KoaSwaggerUiOptions = {
   exposeSpec: false,
   hideTopbar: false,
   favicon: '/favicon.png',
+  customCSS: ''
 };
 
 export function koaSwagger(

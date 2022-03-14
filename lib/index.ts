@@ -54,7 +54,7 @@ const defaultOptions: KoaSwaggerUiOptions = {
   exposeSpec: false,
   hideTopbar: false,
   favicon: '/favicon.png',
-  customCSS: ''
+  customCSS: '',
 };
 
 export function koaSwagger(

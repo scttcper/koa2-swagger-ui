@@ -13,10 +13,15 @@ export interface SwaggerOptions {
     | boolean
     | string[]
     | Record<string, unknown>
+    | Record<string, unknown>[]
     | null
     | undefined;
   dom_id?: string;
   url?: string;
+  urls?: {
+    url: string
+    name: string
+  }[];
   supportedSubmitMethods?: string[];
   docExpansion?: string;
   jsonEditor?: boolean;

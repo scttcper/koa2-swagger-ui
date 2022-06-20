@@ -37,6 +37,7 @@ export interface KoaSwaggerUiOptions {
   oauthOptions: boolean | any;
   swaggerOptions: SwaggerOptions;
   swaggerVersion: string;
+  swaggerCdnUrl?: string;
   routePrefix: string | false;
   specPrefix: string;
   exposeSpec: boolean;
@@ -56,6 +57,7 @@ const defaultOptions: KoaSwaggerUiOptions = {
   routePrefix: '/docs',
   specPrefix: '/docs/spec',
   swaggerVersion: '',
+  swaggerCdnUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui',
   exposeSpec: false,
   hideTopbar: false,
   favicon: '/favicon.png',

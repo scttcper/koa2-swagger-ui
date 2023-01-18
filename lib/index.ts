@@ -34,6 +34,7 @@ export interface SwaggerOptions {
 
 export interface KoaSwaggerUiOptions {
   title: string;
+  // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
   oauthOptions: boolean | any;
   swaggerOptions: SwaggerOptions;
   swaggerVersion: string;

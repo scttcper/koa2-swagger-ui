@@ -11,11 +11,13 @@ jobs:
       - checkout
       - node/install-packages
       - run:
-          name: test
-          command: npm run test:ci
-      - run:
           name: lint
           command: npm run lint
+      - run:
+          name: test
+          command: npm run test:ci
+      - store_test_results:
+          path: ./junit.xml
       - codecov/upload
   release:
     executor:

@@ -101,7 +101,7 @@ export function koaSwagger(
     readFileSync(join(__dirname, './index.hbs'), 'utf-8'),
   );
 
-  // eslint-disable-next-line func-names
+  // eslint-disable-next-line func-names, @typescript-eslint/promise-function-async
   return function koaSwaggerUi(ctx: Context, next: Next) {
     if (options.exposeSpec && specPrefixRegex.test(ctx.path)) {
       ctx.body = options.swaggerOptions.spec;

@@ -52,7 +52,7 @@ const defaultOptions: KoaSwaggerUiOptions = {
   oauthOptions: false,
   swaggerOptions: {
     dom_id: '#swagger-ui',
-    url: 'https://petstore.swagger.io/v2/swagger.json',
+    url: 'https://petstore3.swagger.io/api/v3/openapi.json',
     layout: 'StandaloneLayout',
   },
   routePrefix: '/docs',

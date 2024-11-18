@@ -1,6 +1,6 @@
-import { describe, expect, it } from '@jest/globals';
-import { sync as readPkgUpSync } from 'read-pkg-up';
+import { sync as readPackageUpSync } from 'read-pkg-up';
 import request from 'supertest';
+import { describe, expect, it } from 'vitest';
 
 import app from './example';
 
@@ -30,7 +30,7 @@ describe('koa2-swagger-ui', () => {
       .expect(200);
   });
   it('should return css', async () => {
-    const result = readPkgUpSync({ cwd: __dirname });
+    const result = readPackageUpSync({ cwd: __dirname });
     const version = result!.packageJson.devDependencies!['swagger-ui-dist'];
     expect(version).toBeDefined();
     const url = `https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/${version}`;

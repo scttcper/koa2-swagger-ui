@@ -5,7 +5,7 @@ import type { HelperDelegate, HelperOptions } from 'handlebars';
 import * as Handlebars from 'handlebars';
 import type { Context, Middleware, Next } from 'koa';
 import { defaultsDeep } from 'lodash';
-import { sync as readPkgUpSync } from 'read-pkg-up';
+import { sync as readPackageUpSync } from 'read-pkg-up';
 
 export interface SwaggerOptions {
   [key: string]:
@@ -34,7 +34,6 @@ export interface SwaggerOptions {
 
 export interface KoaSwaggerUiOptions {
   title: string;
-  // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
   oauthOptions: boolean | any;
   swaggerOptions: SwaggerOptions;
   swaggerVersion: string;
@@ -69,7 +68,7 @@ export function koaSwagger(
   config: Partial<KoaSwaggerUiOptions> = {},
 ): Middleware {
   if (config.swaggerVersion === undefined) {
-    const pkg = readPkgUpSync({ cwd: __dirname });
+    const pkg = readPackageUpSync({ cwd: __dirname });
     if (pkg === undefined) {
       throw new Error('Package not found');
     }
@@ -86,7 +85,6 @@ export function koaSwagger(
   const options: KoaSwaggerUiOptions = defaultsDeep(config, defaultOptions);
 
   const specPrefixRegex = new RegExp(`${options.specPrefix}[/]*$`, 'i');
-  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
   const routePrefixRegex = new RegExp(`${options.routePrefix}[/]*$`, 'i');
 
   Handlebars.registerHelper('json', (context) => JSON.stringify(context));

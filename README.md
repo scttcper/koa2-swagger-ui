@@ -1,4 +1,4 @@
-# koa2-swagger-ui [![NPM version][npm-image]][npm-url] [![CircleCI](https://circleci.com/gh/scttcper/koa2-swagger-ui.svg?style=svg)](https://circleci.com/gh/scttcper/koa2-swagger-ui)
+# koa2-swagger-ui [![NPM version][npm-image]][npm-url]
 
 [npm-image]: https://img.shields.io/npm/v/koa2-swagger-ui.svg
 [npm-url]: https://npmjs.org/package/koa2-swagger-ui
